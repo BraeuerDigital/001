@@ -1,0 +1,791 @@
+/* =========================================================
+   BRÄUER.DIGITAL
+   ÜBER MICH – SECTION 02 / MEINE GESCHICHTE
+
+   BILD:
+   ueber-mich-02.png
+
+   VERSION:
+   - Bild kleiner als bisher
+   - Bild bewusst links positioniert
+   - mehr Ruhe zwischen Bild und Text
+   - Textbereich bleibt unverändert hochwertig
+   - fließender Übergang oben und unten
+========================================================= */
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+#bd-about-story {
+  --bd-dark: #0A0D11;
+  --bd-copper: #C78A6A;
+  --bd-white: #F7F5F2;
+  --bd-text: rgba(243, 237, 230, 0.72);
+
+  position: relative;
+
+  width: 100%;
+  max-width: 100%;
+
+  margin: 0;
+
+  padding:
+    76px
+    3.2%
+    80px;
+
+  background: var(--bd-dark);
+
+  overflow-x: clip;
+  overflow-y: hidden;
+
+  isolation: isolate;
+
+  box-sizing: border-box;
+}
+
+#bd-about-story *,
+#bd-about-story *::before,
+#bd-about-story *::after {
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   OBERER ÜBERGANG
+========================================================= */
+
+#bd-about-story::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 80px;
+
+  z-index: 10;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      #0A0D11 0%,
+      rgba(10, 13, 17, 0.92) 20%,
+      rgba(10, 13, 17, 0.56) 50%,
+      rgba(10, 13, 17, 0.16) 78%,
+      rgba(10, 13, 17, 0) 100%
+    );
+}
+
+/* =========================================================
+   UNTERER ÜBERGANG
+========================================================= */
+
+#bd-about-story::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 80px;
+
+  z-index: 10;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(10, 13, 17, 0) 0%,
+      rgba(10, 13, 17, 0.16) 30%,
+      rgba(10, 13, 17, 0.52) 60%,
+      rgba(10, 13, 17, 0.87) 85%,
+      #0A0D11 100%
+    );
+}
+
+/* =========================================================
+   GEMEINSAMER INHALTSBEREICH
+========================================================= */
+
+#bd-about-story .bd-story-inner {
+  position: relative;
+
+  z-index: 2;
+
+  width: min(1480px, 100%);
+  max-width: 100%;
+
+  min-height: 540px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  /*
+    Bildbereich bewusst kleiner.
+
+    40 % links
+    60 % rechts
+  */
+  grid-template-columns:
+    minmax(0, 40%)
+    minmax(0, 60%);
+
+  column-gap:
+    clamp(
+      48px,
+      5vw,
+      82px
+    );
+
+  align-items: center;
+}
+
+/* =========================================================
+   LINKE BILDSPALTE
+========================================================= */
+
+#bd-about-story .bd-story-visual-wrap {
+  position: relative;
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  min-width: 0;
+}
+
+/* =========================================================
+   EIGENTLICHE BILDFLÄCHE
+
+   Das ist die entscheidende Änderung.
+
+   Das Bild füllt NICHT mehr die komplette Höhe der Section,
+   sondern bekommt eine kontrollierte kleinere Fläche.
+========================================================= */
+
+#bd-about-story .bd-story-visual {
+  position: relative;
+
+  width: 100%;
+  max-width: 560px;
+
+  height: 500px;
+
+  margin: 0;
+
+  overflow: hidden;
+
+  background: var(--bd-dark);
+
+  isolation: isolate;
+}
+
+/* =========================================================
+   BILD
+========================================================= */
+
+#bd-about-story .bd-story-image {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 0;
+
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  max-width: none;
+
+  object-fit: cover;
+
+  /*
+    LINKER AUSSCHNITT
+
+    Das Bild bleibt an seiner linken Originalseite
+    verankert.
+
+    Die vertikale Position hält Laptop + Schrift
+    im gewünschten Ausschnitt.
+  */
+  object-position: left 56%;
+}
+
+/* =========================================================
+   BILDVERLAUF RECHTS
+========================================================= */
+
+#bd-about-story .bd-story-image-fade {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+
+    /* rechts */
+    linear-gradient(
+      270deg,
+
+      #0A0D11 0%,
+      rgba(10, 13, 17, 0.82) 3%,
+      rgba(10, 13, 17, 0.46) 7%,
+      rgba(10, 13, 17, 0.16) 12%,
+      rgba(10, 13, 17, 0.03) 18%,
+      rgba(10, 13, 17, 0) 24%
+    ),
+
+    /* oben */
+    linear-gradient(
+      180deg,
+
+      rgba(10, 13, 17, 0.16) 0%,
+      rgba(10, 13, 17, 0.03) 5%,
+      rgba(10, 13, 17, 0) 11%
+    ),
+
+    /* unten */
+    linear-gradient(
+      0deg,
+
+      rgba(10, 13, 17, 0.20) 0%,
+      rgba(10, 13, 17, 0.04) 6%,
+      rgba(10, 13, 17, 0) 13%
+    );
+}
+
+/* =========================================================
+   ZUSÄTZLICHER WEICHER AUSLAUF RECHTS
+========================================================= */
+
+#bd-about-story .bd-story-visual::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 18%;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      90deg,
+
+      rgba(10, 13, 17, 0) 0%,
+      rgba(10, 13, 17, 0.10) 30%,
+      rgba(10, 13, 17, 0.38) 60%,
+      rgba(10, 13, 17, 0.72) 82%,
+      #0A0D11 100%
+    );
+}
+
+/* =========================================================
+   CONTENT RECHTS
+========================================================= */
+
+#bd-about-story .bd-story-content-wrap {
+  position: relative;
+
+  width: 100%;
+
+  min-width: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: flex-start;
+
+  z-index: 3;
+}
+
+#bd-about-story .bd-story-content {
+  position: relative;
+
+  width: 100%;
+  max-width: 660px;
+
+  min-width: 0;
+
+  margin: 0;
+
+  padding: 0;
+}
+
+/* =========================================================
+   KICKER
+========================================================= */
+
+#bd-about-story .bd-story-kicker {
+  position: relative;
+
+  display: inline-block;
+
+  margin:
+    0
+    0
+    24px;
+
+  padding-bottom: 13px;
+
+  color:
+    rgba(243, 237, 230, 0.66);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 10px;
+  font-weight: 500;
+
+  line-height: 1.3;
+
+  letter-spacing: 0.21em;
+
+  text-transform: uppercase;
+}
+
+#bd-about-story .bd-story-kicker::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 52px;
+  height: 1px;
+
+  background: var(--bd-copper);
+}
+
+/* =========================================================
+   HEADLINE
+========================================================= */
+
+#bd-about-story .bd-story-title {
+  width: 100%;
+  max-width: 660px;
+
+  margin:
+    0
+    0
+    25px;
+
+  color: var(--bd-white);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size:
+    clamp(
+      42px,
+      4vw,
+      61px
+    );
+
+  font-weight: 400;
+
+  line-height: 1.02;
+
+  letter-spacing: -0.038em;
+
+  overflow-wrap: break-word;
+}
+
+#bd-about-story .bd-story-title-line {
+  display: block;
+}
+
+#bd-about-story .bd-story-title-accent {
+  display: block;
+
+  color: var(--bd-copper);
+}
+
+/* =========================================================
+   FLIESSTEXT
+========================================================= */
+
+#bd-about-story .bd-story-text {
+  width: 100%;
+  max-width: 610px;
+
+  margin: 0;
+
+  color: var(--bd-text);
+
+  font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  line-height: 1.68;
+
+  letter-spacing: 0.004em;
+
+  overflow-wrap: break-word;
+}
+
+#bd-about-story .bd-story-text + .bd-story-text {
+  margin-top: 14px;
+}
+
+/* =========================================================
+   ABSCHLUSSSTATEMENT
+========================================================= */
+
+#bd-about-story .bd-story-ending {
+  position: relative;
+
+  width: 100%;
+  max-width: 610px;
+
+  margin-top: 23px;
+
+  padding:
+    18px
+    0
+    0
+    24px;
+
+  border-top:
+    1px solid
+    rgba(199, 138, 106, 0.24);
+
+  color:
+    rgba(243, 237, 230, 0.90);
+
+  font-family:
+    Georgia,
+    "Times New Roman",
+    serif;
+
+  font-size: 17px;
+  font-weight: 400;
+
+  font-style: italic;
+
+  line-height: 1.48;
+}
+
+#bd-about-story .bd-story-ending::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 20px;
+
+  width: 2px;
+  height: 37px;
+
+  background: var(--bd-copper);
+}
+
+/* =========================================================
+   GROSSER DESKTOP
+========================================================= */
+
+@media screen and (min-width: 1600px) {
+
+  #bd-about-story .bd-story-inner {
+    width: min(1500px, 94%);
+
+    min-height: 550px;
+  }
+
+  #bd-about-story .bd-story-visual {
+    max-width: 555px;
+
+    height: 500px;
+  }
+
+}
+
+/* =========================================================
+   TABLET / KLEINER DESKTOP
+========================================================= */
+
+@media screen and (max-width: 1100px) {
+
+  #bd-about-story {
+    padding:
+      65px
+      28px
+      70px;
+  }
+
+  #bd-about-story .bd-story-inner {
+    min-height: 520px;
+
+    grid-template-columns:
+      minmax(0, 39%)
+      minmax(0, 61%);
+
+    column-gap: 40px;
+  }
+
+  #bd-about-story .bd-story-visual {
+    height: 460px;
+
+    max-width: 100%;
+  }
+
+  #bd-about-story .bd-story-image {
+    object-position: left 56%;
+  }
+
+  #bd-about-story .bd-story-title {
+    font-size:
+      clamp(
+        38px,
+        5vw,
+        51px
+      );
+  }
+
+  #bd-about-story .bd-story-text {
+    font-size: 13.5px;
+
+    line-height: 1.62;
+  }
+
+  #bd-about-story .bd-story-ending {
+    font-size: 16px;
+  }
+
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media screen and (max-width: 700px) {
+
+  #bd-about-story {
+    padding:
+      52px
+      20px
+      68px;
+  }
+
+  #bd-about-story::before {
+    height: 55px;
+  }
+
+  #bd-about-story::after {
+    height: 60px;
+  }
+
+  #bd-about-story .bd-story-inner {
+    width: 100%;
+
+    min-height: 0;
+
+    display: block;
+  }
+
+  /* =====================================================
+     BILD MOBILE
+  ====================================================== */
+
+  #bd-about-story .bd-story-visual-wrap {
+    width: 100%;
+
+    display: block;
+  }
+
+  #bd-about-story .bd-story-visual {
+    width: 100%;
+    max-width: 100%;
+
+    height: auto;
+
+    aspect-ratio: 1.22 / 1;
+  }
+
+  #bd-about-story .bd-story-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    object-position: left 57%;
+  }
+
+  #bd-about-story .bd-story-image-fade {
+    background:
+
+      linear-gradient(
+        0deg,
+
+        #0A0D11 0%,
+        rgba(10, 13, 17, 0.58) 5%,
+        rgba(10, 13, 17, 0.18) 12%,
+        rgba(10, 13, 17, 0) 20%
+      ),
+
+      linear-gradient(
+        270deg,
+
+        rgba(10, 13, 17, 0.18) 0%,
+        rgba(10, 13, 17, 0) 9%
+      );
+  }
+
+  #bd-about-story .bd-story-visual::after {
+    display: none;
+  }
+
+  /* =====================================================
+     CONTENT MOBILE
+  ====================================================== */
+
+  #bd-about-story .bd-story-content-wrap {
+    width: 100%;
+
+    display: block;
+
+    padding-top: 40px;
+  }
+
+  #bd-about-story .bd-story-content {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  #bd-about-story .bd-story-kicker {
+    margin-bottom: 22px;
+
+    padding-bottom: 11px;
+
+    font-size: 9px;
+
+    letter-spacing: 0.18em;
+  }
+
+  #bd-about-story .bd-story-kicker::after {
+    width: 45px;
+  }
+
+  #bd-about-story .bd-story-title {
+    width: 100%;
+    max-width: 100%;
+
+    margin-bottom: 23px;
+
+    font-size:
+      clamp(
+        37px,
+        10.5vw,
+        48px
+      );
+
+    line-height: 1.03;
+  }
+
+  #bd-about-story .bd-story-text {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: 13.5px;
+
+    line-height: 1.68;
+  }
+
+  #bd-about-story .bd-story-text + .bd-story-text {
+    margin-top: 14px;
+  }
+
+  #bd-about-story .bd-story-ending {
+    width: 100%;
+    max-width: 100%;
+
+    margin-top: 23px;
+
+    padding:
+      17px
+      0
+      0
+      20px;
+
+    font-size: 16px;
+
+    line-height: 1.48;
+  }
+
+  #bd-about-story .bd-story-ending::before {
+    top: 19px;
+
+    height: 34px;
+  }
+
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media screen and (max-width: 420px) {
+
+  #bd-about-story {
+    padding:
+      48px
+      18px
+      62px;
+  }
+
+  #bd-about-story .bd-story-visual {
+    aspect-ratio: 1.10 / 1;
+  }
+
+  #bd-about-story .bd-story-image {
+    object-position: left 58%;
+  }
+
+  #bd-about-story .bd-story-content-wrap {
+    padding-top: 35px;
+  }
+
+  #bd-about-story .bd-story-title {
+    font-size:
+      clamp(
+        35px,
+        10.5vw,
+        44px
+      );
+  }
+
+  #bd-about-story .bd-story-ending {
+    font-size: 15.5px;
+  }
+
+}

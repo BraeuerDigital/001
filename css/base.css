@@ -1,0 +1,47 @@
+/* =========================================================
+   BRÄUER.DIGITAL – Design Tokens
+   (Die Sektionen behalten ihre eigenen, 1:1 übernommenen Werte.)
+========================================================= */
+:root {
+  --color-dark: #0A0D11;
+  --color-anthracite: #18181F;
+  --color-copper: #C78A6A;
+  --color-cream: #F3EDE6;
+  --color-taupe: #ABA49A;
+  --color-white: #FFFFFF;
+
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-sans: Arial, Helvetica, sans-serif;
+  --font-script: "Brush Script MT", "Segoe Script", cursive;
+
+  --content-max-width: 1440px;
+}
+
+/* =========================================================
+   Basis – entspricht den Resets des bisherigen Shopify-Themes,
+   auf die sich der Custom-Code stillschweigend verlassen hat.
+========================================================= */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+  color: #000;
+  background: #fff;
+}
+
+img, picture, video, canvas, svg { display: block; max-width: 100%; }
+img { width: 100%; height: auto; }
+
+p, h1, h2, h3, h4, h5, h6 { overflow-wrap: break-word; }
+
+a {
+  color: currentcolor;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 0.075em;
+  text-underline-offset: 0.125em;
+}
