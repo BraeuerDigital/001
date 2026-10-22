@@ -1,6 +1,0 @@
-{
-  "name": "braeuer-digital",
-  "version": "1.0.0",
-  "private": true,
-  "scripts": { "start": "npx --yes serve ." }
-}
