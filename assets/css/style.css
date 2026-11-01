@@ -153,7 +153,7 @@ input:focus,textarea:focus{outline:0;border-color:var(--copper)}textarea{min-hei
 .svc2{display:grid;grid-template-columns:1.15fr .85fr;gap:4rem;align-items:center;padding:4.5rem 0;border-top:1px solid #ffffff1c;position:relative}
 .svc2:nth-child(even) .panel{order:-1}
 .svc2 h2{margin-bottom:1rem}.lead{font-size:1.2rem;color:#d8d0c6}
-.prices .panel h3{font-size:2.5rem;font-weight:600;color:var(--copper);margin:.2rem 0 .8rem}.price-note{font-size:1.25rem;line-height:1.55;font-weight:500;letter-spacing:-.01em;color:var(--cream)}
+.price-note{font-size:1.25rem;line-height:1.55;font-weight:500;letter-spacing:-.01em;color:var(--cream)}
 .steps-sec{padding:6rem var(--pad) 2rem}.steps li{position:relative;border-top:1px solid #ffffff26}
 .steps li::after{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--copper);box-shadow:0 0 18px 2px rgba(199,138,106,.7)}
 .costs{background:none;margin-top:0;padding:5rem 0 4rem}
@@ -165,7 +165,7 @@ input:focus,textarea:focus{outline:0;border-color:var(--copper)}textarea{min-hei
 .btn:hover,.btn:focus-visible,.btn.ghost:hover,.btn.ghost:focus-visible,.light .btn:hover{border-color:var(--copper);color:#fff;box-shadow:0 0 50px -8px var(--copper),inset 0 -18px 30px -20px rgba(199,138,106,.55)}
 @media(max-width:520px){.site-footer li a[href^="mailto"]{font-size:.8rem;letter-spacing:0}}
 /* Typografie-Feinschliff: ausgewogene Zeilenumbrüche in Überschriften */
-h1,h2,h3{text-wrap:balance}.prices .panel h3{letter-spacing:-.01em}
+h1,h2,h3{text-wrap:balance}
 h2{line-height:1.14}
 
 /* Hero Startseite: zwei Zeilen, filigran, kupferner Glow wie bei den Buttons */
