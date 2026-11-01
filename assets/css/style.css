@@ -110,7 +110,7 @@ input:focus,textarea:focus{outline:0;border-color:var(--copper)}textarea{min-hei
 .chap img{height:300px;object-fit:cover;object-position:right center}.chap.l2 img{object-position:left center}
 .chap div,.chap.r div{position:static;width:auto;transform:none;padding:2rem var(--pad) 3.5rem}
 .page-head{padding:9rem 0 3.5rem}.cta{padding:7rem 0 5rem}}
-@media(max-width:520px){.steps{grid-template-columns:1fr}.f-grid{grid-template-columns:1fr}.btn{width:100%;text-align:center}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}.f-grid{gap:2.5rem 1.5rem}.site-footer li a{font-size:.95rem;overflow-wrap:anywhere}.btn{width:100%;text-align:center}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.hero .in{opacity:1;transform:none}html{scroll-behavior:auto}}
 /* Sub-Heros, Über-mich-Layout, gestapelter Hero (Tablet/Mobil) */
 .hero.sub{--fade:var(--dark)}.hero.sub h1{max-width:15ch;font-size:clamp(2.3rem,5.2vw,4.4rem)}.hero.sub .wrap{padding-bottom:6rem}
@@ -159,3 +159,4 @@ input:focus,textarea:focus{outline:0;border-color:var(--copper)}textarea{min-hei
 .btn,.btn.ghost{border:1px solid rgba(199,138,106,.6);border-radius:18px;background:linear-gradient(160deg,#15171c,#0a0d11)!important;color:var(--cream);box-shadow:0 0 38px -14px var(--copper),inset 0 -18px 30px -24px rgba(199,138,106,.4);transition:box-shadow .4s,border-color .4s,color .3s}
 .btn::before{display:none}
 .btn:hover,.btn:focus-visible,.btn.ghost:hover,.btn.ghost:focus-visible,.light .btn:hover{border-color:var(--copper);color:#fff;box-shadow:0 0 50px -8px var(--copper),inset 0 -18px 30px -20px rgba(199,138,106,.55)}
+@media(max-width:520px){.site-footer li a[href^="mailto"]{font-size:.8rem;letter-spacing:0}}

@@ -14,7 +14,7 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 $$(".rv").forEach(el=>io.observe(el));
 if(CONFIG.phone||CONFIG.whatsapp){const q=document.createElement("div");q.className="quick";
 if(CONFIG.phone)q.innerHTML+=`<a href="tel:${CONFIG.phone}">Anrufen</a>`;
-if(CONFIG.whatsapp)q.innerHTML+=`<a href="https://wa.me/${CONFIG.whatsapp}" rel="noopener" target="_blank">WhatsApp schreiben</a>`;
+if(CONFIG.whatsapp)q.innerHTML+=`<a href="https://wa.me/${CONFIG.whatsapp}" rel="noopener" target="_blank">WhatsApp</a>`;
 document.body.append(q);onScroll()}
 const f=$("#contact-form");if(f)f.addEventListener("submit",e=>{e.preventDefault();const d=new FormData(f);
 const body=`${d.get("message")}\n\n${d.get("name")}\n${d.get("email")}`;
