@@ -1,3 +1,4 @@
+@font-face{font-family:"Inter Display";font-style:normal;font-weight:300;font-display:swap;src:url(../fonts/InterDisplay-Light.woff) format("woff")}
 @font-face{font-family:"Inter";font-style:normal;font-weight:400;font-display:swap;src:url(../fonts/Inter-Regular.woff) format("woff")}
 @font-face{font-family:"Inter";font-style:normal;font-weight:500;font-display:swap;src:url(../fonts/Inter-Medium.woff) format("woff")}
 @font-face{font-family:"Inter";font-style:normal;font-weight:600;font-display:swap;src:url(../fonts/Inter-SemiBold.woff) format("woff")}
@@ -166,3 +167,7 @@ input:focus,textarea:focus{outline:0;border-color:var(--copper)}textarea{min-hei
 /* Typografie-Feinschliff: ausgewogene Zeilenumbrüche in Überschriften */
 h1,h2,h3{text-wrap:balance}.prices .panel h3{letter-spacing:-.01em}
 h2{line-height:1.14}
+
+/* Hero Startseite: zwei Zeilen, filigran, kupferner Glow wie bei den Buttons */
+.hero:not(.sub) h1{font-weight:300;font-size:clamp(2.2rem,5.4vw,4.6rem);letter-spacing:-.03em;line-height:1.1;max-width:none;text-shadow:0 0 34px rgba(199,138,106,.5),0 0 72px rgba(199,138,106,.22)}
+.hero:not(.sub) h1 span{display:block}
