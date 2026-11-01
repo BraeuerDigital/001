@@ -13,6 +13,7 @@ npm start        # oder: python3 -m http.server 8000
 - `assets/css/style.css` – Designsystem (Farben als CSS-Variablen)
 - `assets/js/main.js` – Menü, Header, Reveal, Kontaktformular
 - `assets/img/` – optimierte Bilder (WebP)
+- `assets/fonts/` – Schrift Inter / Inter Display (SIL Open Font License, Lizenztext liegt bei), lokal eingebunden, keine externen Schriftserver
 
 ## Anpassen
 - **Schnellkontakt-Leiste** (Anrufen / WhatsApp): Nummern stehen oben in `assets/js/main.js` unter `CONFIG`. Leer lassen = Leiste bleibt aus.
